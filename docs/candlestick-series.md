@@ -4,15 +4,15 @@ A candlestick chart shows price movements in the form of candlesticks.
 
 On the candlestick chart, open & close values form a solid body of a candle while wicks show high & low values for a candlestick’s time interval.
 
-![Сandle chart example](./assets/candle-series.png "Сandle chart example")
+![Сandlestick chart example](./assets/candlestick-series.png "Сandlestick chart example")
 
 ## How to create candlestick series
 
 ```javascript
-const candleSeries = chart.addCandleSeries();
+const candlestickSeries = chart.addCandlestickSeries();
 
 // set data
-candleSeries.setData([
+candlestickSeries.setData([
     { time: "2018-12-19", open: 141.77, high: 170.39, low: 120.25, close: 145.72 },
     { time: "2018-12-20", open: 145.72, high: 147.99, low: 100.11, close: 108.19 },
     { time: "2018-12-21", open: 108.19, high: 118.43, low: 74.22, close: 75.16 },
@@ -44,23 +44,23 @@ Candlestick series interface can be customized using the following set of option
 
 |Name|Type|Default|Description|
 |----|----|-------|-----------|
-|`upColor`|`string`|`#26a69a`|Growing candles' color|
-|`downColor`|`string`|`#ef5350`|Falling candles' color|
-|`borderVisible`|`boolean`|`true`|If true, the borders of a candle are drawn|
-|`wickVisible`|`boolean`|`true`|If true, the high and low prices are shown as wicks of a candle|
-|`borderColor`|`string`|`#378658`|Border color of all candles in series|
-|`wickColor`|`string`|`#737375`|Wicks' color of all candles in series|
-|`borderUpColor`|`string`|`#26a69a`|Growing candle's border color.|
-|`borderDownColor`|`string`|`#ef5350`|Falling candle's border color.|
-|`wickUpColor`|`string`|`#26a69a`|Growing candle's wicks color.|
-|`wickDownColor`|`string`|`#ef5350`|Falling candle's wicks.|
+|`upColor`|`string`|`#26a69a`|Growing candlesticks' color|
+|`downColor`|`string`|`#ef5350`|Falling candlesticks' color|
+|`borderVisible`|`boolean`|`true`|If true, the borders of a candlestick are drawn|
+|`wickVisible`|`boolean`|`true`|If true, the high and low prices are shown as wicks of a candlestick|
+|`borderColor`|`string`|`#378658`|Border color of all candlesticks in series|
+|`wickColor`|`string`|`#737375`|Wicks' color of all candlesticks in series|
+|`borderUpColor`|`string`|`#26a69a`|Growing candlesticks' border color.|
+|`borderDownColor`|`string`|`#ef5350`|Falling candlesticks' border color.|
+|`wickUpColor`|`string`|`#26a69a`|Growing candlesticks' wicks color.|
+|`wickDownColor`|`string`|`#ef5350`|Falling candlesticks' wicks.|
 
 ### Examples
 
 - set initial options for candlestick series:
 
     ```javascript
-    const candleSeries = chart.addCandleSeries({
+    const candlestickSeries = chart.addCandlestickSeries({
         upColor: '#6495ED',
         downColor: '#FF6347',
         borderVisible: false,
@@ -77,8 +77,8 @@ Candlestick series interface can be customized using the following set of option
 - change options after series is created:
 
     ```javascript
-    // for example, let's override up and down color of the candle
-    candleSeries.applyOptions({
+    // for example, let's override up and down color of candlesticks
+    candlestickSeries.applyOptions({
         upColor: 'rgba(255, 0, 0, 1)',
         downColor: 'rgba(0, 255, 0, 1)',
     });
